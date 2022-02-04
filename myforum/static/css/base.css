@@ -1,0 +1,14 @@
+#header-container {
+    background-color: #333333;
+    height: 50px;
+}
+
+#header {
+    display: flex;
+    width: 100px;
+    margin: 0 auto;
+}
+
+#category {
+    display: inline-flex;
+}

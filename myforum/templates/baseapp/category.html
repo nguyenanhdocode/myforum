@@ -1,0 +1,7 @@
+<ul id="category">
+    <a class="category-item" href="{% url 'baseapp:home' %}">Trang chủ</a>
+
+    {% for c in categories %}
+    <a class="category-item" href="{% url 'baseapp:category' c.pk %}">{{ c.name }}</a>
+    {% endfor %}
+</ul>

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Xóa bài viết{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        <h2>Bạn có muốn xóa bài viết "{{ post.title }}"?</h2>
+        <p>Bài viết sẽ không phải khôi phục sau khi đã xóa.</p>
+        <input type="submit" value="Xóa">
+        {% csrf_token %}
+    </form>
+{% endblock %}

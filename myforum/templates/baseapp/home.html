@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <h2>
+                <a href="{% url 'baseapp:detail' post.slug %}">{{ post.title }}</a>
+            </h2>
+            <p>{{ post.created }} by {{ post.author.username }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

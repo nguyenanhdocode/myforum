@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Chi tiết{% endblock %}
+
+{% block content %}
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.created }} by {{ post.author.username }}</p>
+    <a href="{% url 'baseapp:edit' post.slug %}">Edit</a>
+    <a href="{% url 'baseapp:delete' post.slug %}">Delete</a>
+    <div>
+        {{ post.body|safe }}
+    </div>
+{% endblock %}

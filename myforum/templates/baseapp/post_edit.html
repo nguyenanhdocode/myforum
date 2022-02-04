@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Chỉnh sửa bài viết{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        {{ form.media }}
+        {{ form.as_p }}
+        <input type="submit" value="Lưu thay đổi">
+        {% csrf_token %}
+    </form>
+{% endblock %}
